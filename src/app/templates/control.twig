@@ -1,5 +1,9 @@
 {% include 'base.html' %}
-<div id="video_div" style="width:300px; height:200px;"></div>
+ <video width="320" height="240" controls>
+  <source src="C:/Users/aungz/Desktop/workspace/Karaoke/SakuraKaraoke/v3.2/release/bk/a7908.mp4.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video> 
 <script >
 	var loginForm = {
 		view:"form",
@@ -19,14 +23,14 @@
             	{}
             ]}
         ]};
-        var video = webix.ui({
-			    view:"video",
-			    container:"video_div",
-			    id:"video1", 
-			    src: [
-			        "C:/Users/aungz/Desktop/workspace/Karaoke/SakuraKaraoke/v3.2/release/bk/a7908.mp4"
-			    ]
-			});
+   //      var video = webix.ui({
+			//     view:"video",
+			//     container:"video_div",
+			//     id:"video1", 
+			//     src: [
+			//         "C:/Users/aungz/Desktop/workspace/Karaoke/SakuraKaraoke/v3.2/release/bk/a7908.mp4"
+			//     ]
+			// });
 	webix.ui(
 		{rows:[
 			loginForm
