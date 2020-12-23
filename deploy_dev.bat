@@ -1,0 +1,1 @@
+php -S 172.20.10.10:8888 -t C:\Users\aungz\Desktop\workspace\git\Famikomyu\src\public

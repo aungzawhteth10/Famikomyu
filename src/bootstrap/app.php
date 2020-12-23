@@ -12,7 +12,7 @@ $app->get('/first', function($request, $response) {
 
 $container = $app->getContainer();
 $container['view'] = function ($container) {
-   $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
+   $view = new \Slim\Views\Twig(__DIR__ . '/../app/templates', [
        'cache' => false,
    ]);
    $view->addExtension(new \Slim\Views\TwigExtension(
@@ -21,6 +21,9 @@ $container['view'] = function ($container) {
    ));
    return $view;
 };
-$container['HomeController'] = function ($container) {
-   return new \App\Controllers\HomeController($container->view);
+$container['ApiLogin'] = function ($container) {
+   return new \App\Api\ApiLogin($container->view);
+};
+$container['RunVideo'] = function ($container) {
+   return new \App\Api\RunVideo($container->view);
 };
